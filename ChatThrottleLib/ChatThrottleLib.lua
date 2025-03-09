@@ -28,7 +28,7 @@ local MSG_OVERHEAD = 40		-- Guesstimate overhead for sending a message; source+d
 
 local BURST = 4000				-- WoW's server buffer seems to be about 32KB. 8KB should be safe, but seen disconnects on _some_ servers. Using 4KB now.
 
-local MIN_FPS = 20				-- Reduce output CPS to half (and don't burst) if FPS drops below this value
+local MIN_FPS = 56				-- Reduce output CPS to half (and don't burst) if FPS drops below this value
 
 if(ChatThrottleLib and ChatThrottleLib.version>=CTL_VERSION) then
 	-- There's already a newer (or same) version loaded. Buh-bye.

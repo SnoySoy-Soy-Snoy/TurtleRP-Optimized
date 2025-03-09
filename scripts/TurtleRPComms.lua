@@ -455,5 +455,6 @@ function TurtleRP.DrunkDecode(text)
 end
 
 function TurtleRP.ttrpChatSend(message)
+  if (UnitAffectingCombat("player")) then return; end
   ChatThrottleLib:SendChatMessage("NORMAL", TurtleRP.channelName, TurtleRP.DrunkEncode(message), "CHANNEL", nil, GetChannelName(TurtleRP.channelName))
 end
